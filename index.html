@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack - Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">💰 FinTrack</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Главная</a>
+                <a href="transactions.html">Операции</a>
+                <a href="statistics.html">Статистика</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Личный финансовый трекер</h1>
+        
+        <div class="balance-card">
+            <h3>Текущий баланс</h3>
+            <div class="balance-amount" id="balance">0 ₽</div>
+        </div>
+
+        <div class="summary-cards">
+            <div class="card income-card">
+                <h4>Доходы</h4>
+                <div class="amount" id="totalIncome">0 ₽</div>
+            </div>
+            <div class="card expense-card">
+                <h4>Расходы</h4>
+                <div class="amount" id="totalExpense">0 ₽</div>
+            </div>
+        </div>
+
+        <div class="recent-transactions">
+            <h3>Последние операции</h3>
+            <div id="recentList" class="transactions-list"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
