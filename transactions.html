@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack - Операции</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">💰 FinTrack</a>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="transactions.html" class="active">Операции</a>
+                <a href="statistics.html">Статистика</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Добавить операцию</h1>
+        
+        <div class="balance-card">
+            <form id="transactionForm">
+                <div style="margin-bottom: 15px;">
+                    <label>Тип операции:</label><br>
+                    <label><input type="radio" name="type" value="income" checked> Доход</label>
+                    <label><input type="radio" name="type" value="expense"> Расход</label>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label>Сумма (₽):</label><br>
+                    <input type="number" id="amount" required step="0.01" style="width: 100%; padding: 10px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label>Категория:</label><br>
+                    <select id="category" style="width: 100%; padding: 10px;">
+                        <option value="Еда">Еда</option>
+                        <option value="Транспорт">Транспорт</option>
+                        <option value="Развлечения">Развлечения</option>
+                        <option value="Зарплата">Зарплата</option>
+                        <option value="Другое">Другое</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label>Описание (необязательно):</label><br>
+                    <input type="text" id="description" style="width: 100%; padding: 10px;">
+                </div>
+                
+                <button type="submit" style="background: #667eea; color: white; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer;">Добавить</button>
+            </form>
+        </div>
+        
+        <div class="recent-transactions">
+            <h3>Все операции</h3>
+            <div id="allTransactionsList" class="transactions-list"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="transactions.js"></script>
+</body>
+</html>
